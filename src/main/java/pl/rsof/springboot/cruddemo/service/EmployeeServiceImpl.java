@@ -1,5 +1,5 @@
 /*
- *  Company: RS
+  *  Company: RS
  *  Project: cruddemo
  *  Created: 5 kwi 2022  21:27:42
  *  Author:  RS 		
@@ -10,6 +10,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,9 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 	
 	private EmployeeDAO employeeDAO;
 	
-	
+	// aby serwis wiedział, który bean wstrzyknąć należy użyć Qualifier w serwisie lub Primary w DAO
 	@Autowired
-	public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
+	public EmployeeServiceImpl(@Qualifier("employeeDAOJpaImpl") EmployeeDAO employeeDAO) {
 		this.employeeDAO = employeeDAO;
 	}
 

@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 import pl.rsof.springboot.cruddemo.entity.Employee;
 
 /**
- * <p></p><p>31 mar 2022</p>
+ * <p>Hibernate native</p><p>31 mar 2022</p>
  * @author RS
  *
  */
